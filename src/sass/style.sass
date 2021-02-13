@@ -1,3 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap')
+$color: #535955
+$color1: #ff4c00
+
 h1, h2, h3, h4, h5, h6, body
   padding: 0
   margin: 0
+
+body
+  font-size: 18px
+  font-family: 'Lato', sans-serif
+
+
+a
+  text-decoration: none
+  color: $color
+
+
+.container
+  width: 100%
+  max-width: ((1500*1400)/1900)+px
+  margin: 0 auto
+  background: orange
+
+.navbar
+  .navbar-inner
+    position: fixed
+    height: 60px
+    width: ((1500*1400)/1900)+px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .navbar__brand
+      font-size: 22px
+      text-transform: uppercase
+      font-weight: bold
+      padding: 0 30px
+    .navbar__nav
+      ul.nav
+        li.navbar__item
+          display: inline-block
+          list-style: none
+          padding: 0 20px
+          a.navbar__link
+            padding: 0
+
+
+.header
+  .header-inner
+    text-align: center
+    h1.text_uppercase
+      color: white
+      text-transform: uppercase
+      text-align: center
+      padding-top: 190px
+      padding-bottom: 5px
+      margin: 0 auto
+      &:after
+        content: ""
+        display: block
+        width: 50px
+        height: 3px
+        margin: 50px auto
+        background: $color
+    p.text_bold
+      font-weight: bold
+    p.text_italic
+      font-style: italic
+      opacity: .8
+
+  a.btn_scrollStyle
+    margin: 50px auto
+
+section#about.education
+  .container
+    h2.text_uppercase
+    .education__part
+      .part
+
+
+section#work.work
+
+
+section#github.git
+
+
+section#contact.contact
+

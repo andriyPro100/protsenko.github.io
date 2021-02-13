@@ -1,3 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 h1, h2, h3, h4, h5, h6, body {
   padding: 0;
   margin: 0; }
+
+body {
+  font-size: 18px;
+  font-family: 'Lato', sans-serif; }
+
+a {
+  text-decoration: none;
+  color: #535955; }
+
+.container {
+  width: 100%;
+  max-width: 1105.26316px;
+  margin: 0 auto;
+  background: orange; }
+
+.navbar .navbar-inner {
+  position: fixed;
+  height: 60px;
+  width: 1105.26316px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .navbar .navbar-inner .navbar__brand {
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0 30px; }
+  .navbar .navbar-inner .navbar__nav ul.nav li.navbar__item {
+    display: inline-block;
+    list-style: none;
+    padding: 0 20px; }
+    .navbar .navbar-inner .navbar__nav ul.nav li.navbar__item a.navbar__link {
+      padding: 0; }
+
+.header .header-inner {
+  text-align: center; }
+  .header .header-inner h1.text_uppercase {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 190px;
+    padding-bottom: 5px;
+    margin: 0 auto; }
+    .header .header-inner h1.text_uppercase:after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 3px;
+      margin: 50px auto;
+      background: #535955; }
+  .header .header-inner p.text_bold {
+    font-weight: bold; }
+  .header .header-inner p.text_italic {
+    font-style: italic;
+    opacity: .8; }
+
+.header a.btn_scrollStyle {
+  margin: 50px auto; }
