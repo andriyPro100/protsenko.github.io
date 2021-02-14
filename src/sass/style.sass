@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap')
-$color: #535955
-$color1: #ff4c00
+$color: #ff5500
+$color1: black
+
 
 h1, h2, h3, h4, h5, h6, body
   padding: 0
@@ -10,24 +11,31 @@ body
   font-size: 18px
   font-family: 'Lato', sans-serif
 
-
 a
   text-decoration: none
   color: $color
-
+  transition: .2s
+  &:hover
+    color: $color1
 
 .container
   width: 100%
   max-width: ((1500*1400)/1900)+px
   margin: 0 auto
-  background: orange
+
 
 .navbar
+
+  .navbar-inner_white
+    background: white
+
   .navbar-inner
+    z-index: 1
     position: fixed
     height: 60px
     width: ((1500*1400)/1900)+px
     display: flex
+    transition: background .3s ease
     justify-content: space-between
     align-items: center
     .navbar__brand
@@ -46,43 +54,116 @@ a
 
 
 .header
+  background: linear-gradient(to bottom, rgba(250, 250, 250, 0.3), rgba(250, 250, 250, 0.2)), url("../../src/img/79338db3397a730cba7d031687f255ee.png") no-repeat center
+  background-size: cover
+  width: 100%
+  height: 100vh
+  color: white
+  text-shadow: 2px 0 2px #111
   .header-inner
     text-align: center
     h1.text_uppercase
-      color: white
       text-transform: uppercase
       text-align: center
       padding-top: 190px
       padding-bottom: 5px
       margin: 0 auto
+      opacity: 1
       &:after
         content: ""
         display: block
         width: 50px
         height: 3px
-        margin: 50px auto
-        background: $color
+        margin: 30px auto
+        background: white
+
     p.text_bold
       font-weight: bold
     p.text_italic
       font-style: italic
-      opacity: .8
+      opacity: .9
 
-  a.btn_scrollStyle
-    margin: 50px auto
+    a.btn_scrollStyle
+      text-shadow: 0 0
+      font-weight: bold
+      display: block
+      margin: 50px auto
+      padding: 10px 10px
+      width: 150px
+      color: $color1
+      background: $color
+      border-radius: 20px
+      transition: .2s
+      &:hover
+        background: #ff1e00
+        color: white
+
 
 section#about.education
-  .container
-    h2.text_uppercase
-    .education__part
-      .part
+  scroll-behavior: smooth
+  width: 100%
+  height: 100vh
+  background-color: $color
+  text-align: center
+  h2.text_uppercase
+    padding: 100px 0
+    font-weight: bold
+    letter-spacing: 5px
+    &:after
+      content: ""
+      display: block
+      width: 50px
+      height: 3px
+      margin: 30px auto
+      background: black
+
+  .education__part
+    display: flex
+    justify-content: space-between
+    .part
+      width: 20%
+      display: inline-block
+      vertical-align: top
 
 
 section#work.work
 
 
 section#github.git
+  background: #1db954
+  width: 100%
+  height: 100vh
+  .git-wrapper
+
+    text-align: center
+    .git__link
+      padding: 60px 0 0 10px
+      &:after
+        content: ""
+        display: block
+        width: 50px
+        height: 3px
+        margin: 30px auto
+        background: black
+      a.link
+        color: #111111
+    .git__projects
+      height: 10vh
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 15vw 15vw
+      .git__projects__item
+        margin: 2px
+        display: block
+        position: relative
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+          transition: .3s
+          &:hover
+            opacity: 0.7
+
 
 
 section#contact.contact
-

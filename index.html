@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>Protsenko Andrii - portfolio</title>
     <link rel="stylesheet" href="src/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
 <body id="page-top">
     <nav class="navbar" id="mainNav">
         <div class="container">
-            <div class="navbar-inner">
+            <div class="navbar-inner" id="menu">
                 <div class="navbar__brand">
                     <a href="#page-top">Andrii Protsenko</a>
                 </div>
@@ -35,9 +36,7 @@
 
         </div>
     </nav>
-    <!--    Intro sections
-            Header image https://theimageconference.org/wp-content/uploads/2020/04/vancouver_image_conference_3-scaled.jpg
-    -->
+    <!--  Intro sections  -->
     <header class="header" id="#page-top">
         <div class="container">
             <div class="header-inner">
@@ -56,7 +55,18 @@
             <h2 class="text_uppercase">Education</h2>
             <div class="education__part">
                 <div class="part">
-                    icon + text + years(4 items)
+                    <h3>Degree</h3>
+                    <p>Bachelor of Computer Engineering at Kyiv Polytechnic Institute</p>
+                </div>
+                <div class="part">
+                    <h3>Graduation</h3>
+                    <p>The summer of 2021</p>
+                </div><div class="part">
+                    <h3>Languages</h3>
+                    <p>Python, Java, HTML5(HTML/CSS/JS)</p>
+                </div><div class="part">
+                    <h3>Skills</h3>
+                    <p>Embedded Systems, Linux, React, HTML5</p>
                 </div>
             </div>
         </div>
@@ -70,7 +80,17 @@
     <!-- GitHub section -->
     <section class="git" id="github">
         <div class="container">
-
+            <div class="git-wrapper">
+                <h2 class="git__link">
+                    <a href="https://github.com/andriyPro100" class="link">GitHub: andriyPro100</a>
+                </h2>
+                <div class="git__projects">
+                    <a class="git__projects__item" href="https://github.com/andriyPro100/MobileApp5"><img src="./src/img/mobile.png" alt="mobile"></a>
+                    <a class="git__projects__item" href="https://github.com/andriyPro100"><img src="./src/img/mogo.PNG" alt="mogo"></a>
+                    <a class="git__projects__item" href="https://github.com/andriyPro100/SocialNetwork"><img src="./src/img/social.PNG" alt="network"></a>
+                    <a class="git__projects__item" href="https://github.com/andriyPro100/protsenko.github.io"/><img src="./src/img/porfolio.PNG" alt="me"></a>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Contact section -->
@@ -165,6 +185,16 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis cupiditate dolor doloribus harum illo ipsa iusto molestias, nemo nihil nisi numquam quas quidem quisquam sapiente sunt veniam vero. Odit.</p>dd
         </div>
     </section>
+    <script type="text/javascript">
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 200) {
+                $("menu").addClass("navbar-inner_white");
+            } else {
+                $("menu").removeClass("navbar-inner_white");
+            }
+        });
+    </script>
 
 </body>
+
 </html>
