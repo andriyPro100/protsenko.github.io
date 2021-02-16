@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="src/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
-<body id="page-top">
+<body >
     <nav class="navbar" id="mainNav">
-        <div class="container">
+        <div>
             <div class="navbar-inner" id="menu">
-                <div class="navbar__brand">
+                <div class="navbar__brand text_uppercase">
                     <a href="#page-top">Andrii Protsenko</a>
                 </div>
                 <div class="navbar__nav">
@@ -19,13 +19,13 @@
                             <a href="#page-top" class="navbar__link">Home</a>
                         </li>
                         <li class="navbar__item">
-                            <a href="#about" class="navbar__link">Education</a>
+                            <a href="#education" class="navbar__link">Education</a>
                         </li>
                         <li class="navbar__item">
                             <a href="#github" class="navbar__link">GitHub</a>
                         </li>
                         <li class="navbar__item">
-                            <a href="#contact" class="navbar__link">Contact</a>
+                            <a href="#about" class="navbar__link">Contact</a>
                         </li>
                         <li class="navbar__item">
                             <a href="#" class="navbar__link">CV</a>
@@ -37,7 +37,7 @@
         </div>
     </nav>
     <!--  Intro sections  -->
-    <header class="header" id="#page-top">
+    <header class="header" id="page-top">
         <div class="container">
             <div class="header-inner">
                 <h1 class="text_uppercase">Andrii Protsenko</h1>
@@ -50,7 +50,7 @@
 
     </header>
     <!--    education section -->
-    <section class="education" id="about">
+    <section class="education" id="education">
         <div class="container">
             <h2 class="text_uppercase">Education</h2>
             <div class="education__part">
@@ -94,23 +94,34 @@
         </div>
     </section>
     <!-- Contact section -->
-    <section class="contact" id="contact">
+    <section class="about" id="about">
         <div class="container">
-            <div class="contact-wrapper">
+            <div class="about-wrapper">
+                <h2 class="text_uppercase text_after">About</h2>
+                <div class="about__details">
+                    <p>I'm a design-minded, detail oriented software engineer passionate about combining beautiful code
+                        with beautiful design. I love learning new and better ways to create seamless user experiences
+                        with clean, efficient, and scalable code. I consider work an ongoing education, and I'm always
+                        looking for opportunities to work with those who are willing to share their knowledge as much as
+                        I want to learn. At the end of the day, my primary goal is to create something beautiful with
+                        people that bring out the best in me.</p>
+                    <img src="./src/img/person-icon.png" alt="It`s me"/>
+                    <div class="about__info">
+                        <h3 class="text_uppercase">Personal information</h3>
+                        <h4>Full name</h4>
+                        <p>Protsenko Andrii</p>
+                        <h4>Date of birth</h4>
+                        <p>20.11.1999</p>
+                        <h4>Email</h4>
+                        <div>
+                            <a href="mailto:andriy.anatolich@gmail.com">andriy.anatolich@gmail.com</a>
+                        </div>
 
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <script type="text/javascript">
-        $(window).scroll(function() {
-            if ($(document).scrollTop() > 200) {
-                $("menu").addClass("navbar-inner_white");
-            } else {
-                $("menu").removeClass("navbar-inner_white");
-            }
-        });
-    </script>
-
+    <script type="text/javascript" src="src/index.js"></script>
 </body>
-
 </html>

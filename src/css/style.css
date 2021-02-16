@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+section#about.about .container .about-wrapper h2:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #212529;
+  margin: 30px auto;
+  transition: width .4s , color .2s; }
+
 h1, h2, h3, h4, h5, h6, body {
   padding: 0;
   margin: 0; }
@@ -14,34 +23,53 @@ a {
   a:hover {
     color: #212529; }
 
+.activeMenu {
+  color: #f05f40; }
+
+.text_uppercase {
+  text-transform: uppercase; }
+
 .container {
   width: 100%;
   max-width: 1105.26316px;
   margin: 0 auto; }
 
 .navbar .navbar-inner_white {
-  background: white; }
+  background: #212529; }
 
 .navbar .navbar-inner {
   z-index: 1;
   position: fixed;
   height: 60px;
-  width: 1105.26316px;
+  width: 100%;
   display: flex;
-  transition: background .3s ease;
-  justify-content: space-between;
+  transition: background .1s ease;
+  justify-content: space-around;
   align-items: center; }
   .navbar .navbar-inner .navbar__brand {
     font-size: 22px;
-    text-transform: uppercase;
-    font-weight: bold;
     padding: 0 30px; }
+    .navbar .navbar-inner .navbar__brand a:hover {
+      color: #ffeabb; }
   .navbar .navbar-inner .navbar__nav ul.nav li.navbar__item {
     display: inline-block;
     list-style: none;
-    padding: 0 20px; }
+    margin: 0 20px; }
     .navbar .navbar-inner .navbar__nav ul.nav li.navbar__item a.navbar__link {
       padding: 0; }
+      .navbar .navbar-inner .navbar__nav ul.nav li.navbar__item a.navbar__link:hover {
+        color: #f05f40; }
+    .navbar .navbar-inner .navbar__nav ul.nav li.navbar__item:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: #f05f40;
+      transition: width .4s , color .2s; }
+    .navbar .navbar-inner .navbar__nav ul.nav li.navbar__item:hover:after {
+      width: 100%; }
+    .navbar .navbar-inner .navbar__nav ul.nav li.navbar__item:active {
+      color: #f05f40; }
 
 .header {
   background: linear-gradient(to bottom, rgba(1, 1, 1, 0.3), rgba(1, 1, 1, 0.4)), url("../../src/img/79338db3397a730cba7d031687f255ee.png") no-repeat center;
@@ -52,14 +80,10 @@ a {
   text-shadow: 2px 0 2px #212529; }
   .header .header-inner {
     text-align: center; }
-    .header .header-inner h1.text_uppercase {
-      text-transform: uppercase;
-      text-align: center;
+    .header .header-inner h1 {
       padding-top: 190px;
-      padding-bottom: 5px;
-      margin: 0 auto;
-      opacity: 1; }
-      .header .header-inner h1.text_uppercase:after {
+      margin: 0 auto; }
+      .header .header-inner h1:after {
         content: "";
         display: block;
         width: 50px;
@@ -84,27 +108,27 @@ a {
       .header .header-inner a.btn_scrollStyle:hover {
         background: #da492a; }
 
-section#about.education {
+section#education.education {
   scroll-behavior: smooth;
   width: 100%;
   height: 100vh;
   background-color: #f05f40;
   text-align: center; }
-  section#about.education h2.text_uppercase {
-    padding: 100px 0;
+  section#education.education h2.text_uppercase {
+    padding: 150px 0;
     font-weight: bold;
     letter-spacing: 5px; }
-    section#about.education h2.text_uppercase:after {
+    section#education.education h2.text_uppercase:after {
       content: "";
       display: block;
       width: 50px;
       height: 3px;
       margin: 30px auto;
       background: black; }
-  section#about.education .education__part {
+  section#education.education .education__part {
     display: flex;
     justify-content: space-between; }
-    section#about.education .education__part .part {
+    section#education.education .education__part .part {
       width: 20%;
       display: inline-block;
       vertical-align: top; }
@@ -116,7 +140,7 @@ section#github.git {
   section#github.git .git-wrapper {
     text-align: center; }
     section#github.git .git-wrapper .git__link {
-      padding: 60px 0 0 10px; }
+      padding: 120px 0 0 10px; }
       section#github.git .git-wrapper .git__link:after {
         content: "";
         display: block;
@@ -125,14 +149,14 @@ section#github.git {
         margin: 30px auto;
         background: #212529; }
       section#github.git .git-wrapper .git__link a.link {
-        color: #212529; }
+        color: white; }
         section#github.git .git-wrapper .git__link a.link:hover {
-          color: white; }
+          color: #212529; }
     section#github.git .git-wrapper .git__projects {
       height: 10vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 15vw 15vw; }
+      grid-template-rows: 12vw 12vw; }
       section#github.git .git-wrapper .git__projects .git__projects__item {
         margin: 2px;
         display: block;
@@ -144,3 +168,15 @@ section#github.git {
           transition: .3s; }
           section#github.git .git-wrapper .git__projects .git__projects__item img:hover {
             opacity: 0.7; }
+
+section#about.about .container .about-wrapper h2 {
+  padding: 30px;
+  text-align: center; }
+
+section#about.about .container .about-wrapper .about__details {
+  display: flex; }
+  section#about.about .container .about-wrapper .about__details .about__info a {
+    font-weight: bold;
+    color: #212529; }
+    section#about.about .container .about-wrapper .about__details .about__info a:hover {
+      color: #f05f40; }
