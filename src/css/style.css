@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Truculenta:wght@300;500&display=swap");
 section#about.about .container .about-wrapper h2:after {
   content: "";
   display: block;
@@ -28,6 +29,16 @@ a {
 
 .text_uppercase {
   text-transform: uppercase; }
+
+.text_bold {
+  font-weight: bold; }
+
+.text_center {
+  text-align: center; }
+
+.text_padRight {
+  display: inline-block;
+  padding-right: 3px; }
 
 .container {
   width: 100%;
@@ -90,8 +101,6 @@ a {
         height: 3px;
         margin: 30px auto;
         background: white; }
-    .header .header-inner p.text_bold {
-      font-weight: bold; }
     .header .header-inner p.text_italic {
       font-style: italic;
       opacity: .9; }
@@ -111,20 +120,21 @@ a {
 section#education.education {
   scroll-behavior: smooth;
   width: 100%;
+  color: white;
   height: 100vh;
   background-color: #f05f40;
   text-align: center; }
-  section#education.education h2.text_uppercase {
+  section#education.education h2 {
     padding: 150px 0;
     font-weight: bold;
     letter-spacing: 5px; }
-    section#education.education h2.text_uppercase:after {
+    section#education.education h2:after {
       content: "";
       display: block;
       width: 50px;
       height: 3px;
       margin: 30px auto;
-      background: black; }
+      background: white; }
   section#education.education .education__part {
     display: flex;
     justify-content: space-between; }
@@ -169,14 +179,39 @@ section#github.git {
           section#github.git .git-wrapper .git__projects .git__projects__item img:hover {
             opacity: 0.7; }
 
-section#about.about .container .about-wrapper h2 {
-  padding: 30px;
-  text-align: center; }
+section#about.about .container {
+  font-family: 'Truculenta', sans-serif; }
+  section#about.about .container .about-wrapper h2 {
+    padding: 70px;
+    text-align: center; }
+  section#about.about .container .about-wrapper .about__details {
+    display: flex; }
+    section#about.about .container .about-wrapper .about__details p {
+      margin: 20px; }
+    section#about.about .container .about-wrapper .about__details img {
+      margin: 20px; }
+    section#about.about .container .about-wrapper .about__details .about__info li {
+      list-style: none; }
+      section#about.about .container .about-wrapper .about__details .about__info li h4 {
+        width: 160px;
+        padding-top: 10px;
+        padding-bottom: 20px; }
+      section#about.about .container .about-wrapper .about__details .about__info li div {
+        display: block; }
+      section#about.about .container .about-wrapper .about__details .about__info li a {
+        color: #212529; }
+        section#about.about .container .about-wrapper .about__details .about__info li a:hover {
+          color: #f05f40; }
+      section#about.about .container .about-wrapper .about__details .about__info li.about__social {
+        display: flex;
+        justify-content: space-between; }
+        section#about.about .container .about-wrapper .about__details .about__info li.about__social div {
+          width: 40px; }
+          section#about.about .container .about-wrapper .about__details .about__info li.about__social div img {
+            width: 40px; }
 
-section#about.about .container .about-wrapper .about__details {
-  display: flex; }
-  section#about.about .container .about-wrapper .about__details .about__info a {
-    font-weight: bold;
-    color: #212529; }
-    section#about.about .container .about-wrapper .about__details .about__info a:hover {
-      color: #f05f40; }
+footer {
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center; }

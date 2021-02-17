@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@300;500&display=swap')
 $color: #f05f40
 $color1: #212529
 
@@ -35,6 +36,16 @@ a
 
 .text_uppercase
   text-transform: uppercase
+
+.text_bold
+  font-weight: bold
+
+.text_center
+  text-align: center
+
+.text_padRight
+  display: inline-block
+  padding-right: 3px
 
 .container
   width: 100%
@@ -101,9 +112,6 @@ a
         height: 3px
         margin: 30px auto
         background: white
-
-    p.text_bold
-      font-weight: bold
     p.text_italic
       font-style: italic
       opacity: .9
@@ -125,10 +133,11 @@ a
 section#education.education
   scroll-behavior: smooth
   width: 100%
+  color: white
   height: 100vh
   background-color: $color
   text-align: center
-  h2.text_uppercase
+  h2
     padding: 150px 0
     font-weight: bold
     letter-spacing: 5px
@@ -138,7 +147,7 @@ section#education.education
       width: 50px
       height: 3px
       margin: 30px auto
-      background: black
+      background: white
 
   .education__part
     display: flex
@@ -191,24 +200,44 @@ section#github.git
 
 section#about.about
   .container
+    font-family: 'Truculenta', sans-serif
     .about-wrapper
       h2
         @extend %text_after
-        padding: 30px
+        padding: 70px
         text-align: center
       .about__details
         display: flex
         p
+          margin: 20px
         img
+          margin: 20px
         .about__info
+          li
+            list-style: none
+            h4
+              width: 160px
+              padding-top: 10px
+              padding-bottom: 20px
+            div
+              display: block
+            a
+              color: #212529
+              &:hover
+                color: $color
+            &.about__social
 
-          h3
+              display: flex
+              justify-content: space-between
+              div
+                width: 40px
+                img
+                  width: 40px
 
-          h4
 
-          p
-          a
-            font-weight: bold
-            color: #212529
-            &:hover
-              color: $color
+
+footer
+  height: 200px
+  display: flex
+  align-items: flex-end
+  justify-content: center
