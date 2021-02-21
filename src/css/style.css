@@ -125,7 +125,7 @@ section#education.education {
   background-color: #f05f40;
   text-align: center; }
   section#education.education h2 {
-    padding: 150px 0;
+    padding: 150px 0 100px 0;
     font-weight: bold;
     letter-spacing: 5px; }
     section#education.education h2:after {
@@ -142,6 +142,9 @@ section#education.education {
       width: 20%;
       display: inline-block;
       vertical-align: top; }
+      section#education.education .education__part .part img {
+        width: 70px;
+        fill: white; }
 
 section#github.git {
   background: #1db954;
@@ -189,6 +192,7 @@ section#about.about .container {
     section#about.about .container .about-wrapper .about__details p {
       margin: 20px; }
     section#about.about .container .about-wrapper .about__details img {
+      width: 300px;
       margin: 20px; }
     section#about.about .container .about-wrapper .about__details .about__info li {
       list-style: none; }
